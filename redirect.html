@@ -264,11 +264,11 @@
 	function gotolink(appLink, store) {
 	
 		var loadedAt = Date.now();
-		/*tryToLoad = setTimeout(	function(){
+		tryToLoad = setTimeout(	function(){
 							if (Date.now() - loadedAt < 3500){
 								window.location.href = store;
 							}
-						}, 1000);*/
+						}, 1000);
 		
 				
 		var lastChar = appLink.substr(appLink.length - 2, appLink.length - 1);
@@ -277,24 +277,8 @@
 		{
 			appLink = appLink.substr(0, appLink.length - 2);
 		}	
-								
-		console.log("here "+appLink);							
-		var iframe = document.createElement("iframe");
-		iframe.onload = function() {
-			clearTimeout(tryToLoad);
-			iframe.parentNode.removeChild(iframe);
-			window.location.href = appLink;
-		};
-
-		iframe.src = appLink;
-		iframe.setAttribute("style", "display:none;");
-		document.body.appendChild(iframe);
-		console.log("end");		
-
-		//if(isIOS()) {
-	        window.location.replace(appLink);
-			return;
-       // }		
+	    window.location.replace(appLink);
+				
 	}	
 
 	switch (OS) {
