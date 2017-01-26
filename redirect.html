@@ -278,7 +278,7 @@
 			appLink = appLink.substr(0, appLink.length - 2);
 		}	
 								
-									
+		console.log("here "+appLink);							
 		var iframe = document.createElement("iframe");
 		iframe.onload = function() {
 			clearTimeout(tryToLoad);
@@ -289,7 +289,7 @@
 		iframe.src = appLink;
 		iframe.setAttribute("style", "display:none;");
 		document.body.appendChild(iframe);
-			
+		console.log("end");		
 
 		if(isIOS()) {
 	        window.location.replace(appLink);
