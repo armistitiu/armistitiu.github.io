@@ -11,11 +11,14 @@
                 appName: "luckylandcasino",
             },
             android: {
-                scheme: "luckylandcasino",
-                appId: "com.vgwus.luckylandcasino"
+                appId: "com.playstudios.myvegas",
+                scheme: "myvegas",
+                host: "slots",
+                path: "/",
+                fallbackURL: "http://www.playstudios.com/redeem-slots%2F%3Fa%3D"
             }
         });
-        window.setTimeout(deeplink.open("luckylandcasino://promocodes/testasd"), 1000);
+        window.setTimeout(deeplink.open("myvegas://slots/coupon/asd33"), 1000);
     </script>
 </body>
 
