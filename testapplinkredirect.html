@@ -1,15 +1,23 @@
 </html>
-<script type="text/javascript">
-    setTimeout(function () {
-        window.locationhref = "fb://promocodes/123433";
-        console.log("did that")
-    }, 1000);
-</script>
 
 <body>
 
     <div id="result"></div>
+    <script src="browser-deeplink.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        deeplink.setup({
+            iOS: {
+                appId: "284882215",
+                appName: "luckylandcasino",
+            },
+            android: {
+                scheme: "myvegas",
+                appId: "com.vgwus.luckylandcasino"
+            }
+        });
 
+        deeplink.open("promocodes/testasd")
+    </script>
 </body>
 
 </html>
