@@ -1,8 +1,14 @@
 </html>
 
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+</head>
+
 <body>
 
-    <div id="result"></div>
+    <div id="result">
+        <p>HAHAHAHAHAHAH</p>
+    </div>
     <script src="browser-deeplink.js" type="text/javascript"></script>
     <script type="text/javascript">
         deeplink.setup({
@@ -11,14 +17,11 @@
                 appName: "luckylandcasino",
             },
             android: {
-                appId: "com.playstudios.myvegas",
-                scheme: "myvegas",
-                host: "slots",
-                path: "/",
-                fallbackURL: "http://www.playstudios.com/redeem-slots%2F%3Fa%3D"
+                scheme: "luckylandcasino",
+                appId: "com.vgwus.luckylandcasino"
             }
         });
-        window.setTimeout(deeplink.open("myvegas://slots/coupon/asd33"), 1000);
+        window.setTimeout(deeplink.open("luckylandcasino://promocodes/testasd"), 1000);
     </script>
 </body>
 
